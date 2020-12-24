@@ -18,7 +18,7 @@ export const ContainerBody = styled.div`
 `;
 
 export const FirstBlock = styled.div`
-  padding: 200px 50px 30px 50px;
+  padding: 250px 50px 30px 50px;
   display: flex;
 
   @media(max-width: 1150px){
@@ -93,7 +93,7 @@ export const ContentRight = styled.div`
   padding:15px;
   margin-left: 100px;
   width: 100%;
-  height: 100%;
+  height: 50vh;
 
   transition: background 2s;
 
@@ -105,6 +105,10 @@ export const ContentRight = styled.div`
     width: 100%;
     padding:15px;
     margin-left: 0px;
+  }
+
+  @media(max-width: 600px){
+    height: 30vh;
   }
 
 `;
