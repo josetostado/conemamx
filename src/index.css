@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Blockletter Regular';
+  src: local('Blockletter Regular'), url(./assets/fonts/Blockletter.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'DINAlternate-Bold';
+  src: local('DINAlternate-Bold'), url(./assets/fonts/DINAlternate-Bold.ttf) format('truetype');
+}
