@@ -92,6 +92,7 @@ export const ContentRight = styled.div`
   background: rgb(154 27 13 / 0.9);
   padding:15px;
   margin-left: 100px;
+  width: 65vw;
 
   transition: background 2s;
 

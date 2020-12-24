@@ -208,9 +208,9 @@ function HomePage() {
                     muted={true}
                     playing={true}
                     // url= {video}
-                    url= {'https://www.youtube.com/watch?v=XEXh331A3WM&feature=youtu.be'}
                     width='100%'
                     height='100%'
+                    url= {'https://www.youtube.com/watch?v=XEXh331A3WM&feature=youtu.be'}
                     controls = {true}
                   ></ReactPlayer>
                 </ContentRight>
