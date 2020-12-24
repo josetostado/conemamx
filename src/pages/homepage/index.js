@@ -27,7 +27,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 
 
 import { photogears, 
-  video, 
+  // video, 
   facebookBotton, 
   InstagramBotton, 
   LinkedinBotton, 
@@ -207,7 +207,7 @@ function HomePage() {
                   <ReactPlayer
                     muted={true}
                     playing={true}
-                    url= {video}
+                    // url= {video}
                     url= {'https://www.youtube.com/watch?v=XEXh331A3WM&feature=youtu.be'}
                     width='100%'
                     height='100%'
