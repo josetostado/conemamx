@@ -211,14 +211,12 @@ export const Description = styled.div`
 `;
 
 export const SecondBlock = styled.div`
-  padding: 150px 50px 30px 50px;
+  padding: 3% 1.5%;
   margin: 100px auto 0 auto;
-  width: 90vw;
-  height: 50vw;
+  width: 90%;
+  height: 100%;
   min-width: 1260px;
   max-width: 1260px;
-  min-height: 700px;
-  max-height: 700px;
   -webkit-clip-path: clip-path: polygon(43% 7%, 100% 7%, 100% 100%, 0 100%, 0 0, 37% 0);
   clip-path: polygon(43% 7%, 100% 7%, 100% 100%, 0 100%, 0 0, 37% 0);
   position: relative;
@@ -226,16 +224,10 @@ export const SecondBlock = styled.div`
 
   @media(max-width:1300px){
     min-width: 0;
-    min-height: 670px;
   }
   @media(max-width:768px){
-    min-height: 560px;
+    padding: 2% 1%;
   }
-
-  @media(max-width:590px) {
-    min-height: 480px;
-  }
-
 `;
 
 export const SecondBlockCover = styled.div`
@@ -247,7 +239,7 @@ export const SecondBlockCover = styled.div`
   clip-path: polygon(42% 7%, 100% 7%, 100% 100%, 0 100%, 0 0, 36% 0);
   background: rgb(255 30 0 / 26%);
   display: block;
-  position: absolute;
+  position: relative;
   top: 3%;
   left: 1.5%;
   padding:30px;
