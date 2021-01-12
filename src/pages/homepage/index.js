@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import ReactPlayer from "../../components/react-player";
+import ReactPlayer from "react-player";
 
 import LoadingMask from "react-loadingmask";
 import "react-loadingmask/dist/react-loadingmask.css";
@@ -43,8 +43,6 @@ import {
   YoutubeBotton,
 } from "../../assets";
 
-import { backImg, backLog } from "../../assets";
-
 import Header from "../../components/homepageheader";
 
 import { useFormik } from "formik";
@@ -79,9 +77,22 @@ import {
 
 import "react-notifications/lib/notifications.css";
 
-function HomePage() {
-  const images = PROYECTOSDesktop;
+function debounce(fn, ms) {
+  let timer;
+  return (_) => {
+    clearTimeout(timer);
+    timer = setTimeout((_) => {
+      timer = null;
+      fn.apply(this, arguments);
+    }, ms);
+  };
+}
 
+function HomePage() {
+  const [dimensions, setDimensions] = React.useState({
+    height: window.innerHeight,
+    width: window.innerWidth,
+  });
   const fontSize = 24;
   const Icon = ({ type, className = "", style = {} } = {}) => (
     <i className={`fas fa-${type} ${className}`} style={style} />
@@ -96,8 +107,6 @@ function HomePage() {
   );
 
   const [state, setState] = useState({
-    PROYECTO: PROYECTOSDesktop,
-    SERVICIOS: SERVICIOSDesktop,
     isLoading: true,
   });
 
@@ -143,8 +152,10 @@ function HomePage() {
         "https://protected-spire-89566.herokuapp.com/sendmail",
         formData,
         {
-          headers: { "Content-Type": "multipart/form-data" },
-          headers: { "Access-Control-Allow-Origin": "*" },
+          headers: {
+            "Content-Type": "multipart/form-data",
+            "Access-Control-Allow-Origin": "*",
+          },
         }
       );
 
@@ -160,21 +171,20 @@ function HomePage() {
     },
   });
 
-  const handleResize = (e) => {
-    if (window.innerWidth < 400) {
-      setState({
-        ...state,
-        PROYECTO: PROYECTOSMobile,
-        SERVICIOS: SERVICIOSMobile,
+  useEffect(() => {
+    const debouncedHandleResize = debounce(function handleResize() {
+      setDimensions({
+        height: window.innerHeight,
+        width: window.innerWidth,
       });
-    } else {
-      setState({
-        ...state,
-        PROYECTO: PROYECTOSDesktop,
-        SERVICIOS: SERVICIOSDesktop,
-      });
-    }
-  };
+    }, 10);
+
+    window.addEventListener("resize", debouncedHandleResize);
+
+    return (_) => {
+      window.removeEventListener("resize", debouncedHandleResize);
+    };
+  });
 
   useEffect(() => {
     const width = window.innerWidth;
@@ -184,17 +194,11 @@ function HomePage() {
       el.remove();
       if (width < 400) {
         setState({
-          ...state,
           isLoading: false,
-          PROYECTO: PROYECTOSMobile,
-          SERVICIOS: SERVICIOSMobile,
         });
       } else {
         setState({
-          ...state,
           isLoading: false,
-          PROYECTO: PROYECTOSDesktop,
-          SERVICIOS: SERVICIOSDesktop,
         });
       }
     });
@@ -225,7 +229,11 @@ function HomePage() {
                   trabajado. Veinte años de experiencia de cada uno de nuestros
                   ingenieros y técnicos respaldan este compromiso.
                 </Description>
-                <img src={photogears} style={{ width: "100%" }} />
+                <img
+                  src={photogears}
+                  style={{ width: "100%" }}
+                  alt="Trabajadores"
+                />
               </Content>
               <ContentRight>
                 <ReactPlayer
@@ -262,14 +270,25 @@ function HomePage() {
                   </CarouselDiv>
                 </ScrollAnimation>
                 <div style={{ marginTop: "20px" }}>
-                  <ImageGallery
-                    showNav={false}
-                    showThumbnails={false}
-                    autoPlay={true}
-                    slideInterval={5000}
-                    showPlayButton={false}
-                    items={state.SERVICIOS}
-                  />
+                  {dimensions.width <= 768 ? (
+                    <ImageGallery
+                      showNav={false}
+                      showThumbnails={false}
+                      autoPlay={true}
+                      slideInterval={5000}
+                      showPlayButton={false}
+                      items={SERVICIOSMobile}
+                    />
+                  ) : (
+                    <ImageGallery
+                      showNav={false}
+                      showThumbnails={false}
+                      autoPlay={true}
+                      slideInterval={5000}
+                      showPlayButton={false}
+                      items={SERVICIOSDesktop}
+                    />
+                  )}
                 </div>
               </SecondBlockCover>
             </SecondBlock>
@@ -299,14 +318,25 @@ function HomePage() {
                   </CarouselDiv>
                 </ScrollAnimation>
                 <div style={{ marginTop: "20px" }}>
-                  <ImageGallery
-                    showNav={false}
-                    showThumbnails={false}
-                    autoPlay={true}
-                    slideInterval={5000}
-                    showPlayButton={false}
-                    items={state.PROYECTO}
-                  />
+                  {dimensions.width <= 768 ? (
+                    <ImageGallery
+                      showNav={false}
+                      showThumbnails={false}
+                      autoPlay={true}
+                      slideInterval={5000}
+                      showPlayButton={false}
+                      items={PROYECTOSMobile}
+                    />
+                  ) : (
+                    <ImageGallery
+                      showNav={false}
+                      showThumbnails={false}
+                      autoPlay={true}
+                      slideInterval={5000}
+                      showPlayButton={false}
+                      items={PROYECTOSDesktop}
+                    />
+                  )}
                 </div>
               </SecondBlockCover>
             </SecondBlock>

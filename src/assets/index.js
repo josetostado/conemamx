@@ -15,64 +15,74 @@ export const backImg = require("./image/backgrand_lowpoli.jpg");
 export const backLog = require("./image/backgrand_Cgear.svg");
 // export const video = require('./videoes/advertising.mp4');
 
+const PROJECTS_ASSETS = "/assets/images/slides/proyectos";
+const PROJECTS_DESKTOP = `${PROJECTS_ASSETS}/desktop`;
+const PROJECTS_MOVIL = `${PROJECTS_ASSETS}/movil`;
+
+const SERVICES_ASSETS = "/assets/images/slides/servicios/";
+const SERVICES_DESKTOP = `${SERVICES_ASSETS}/desktop`;
+const SERVICES_MOVIL = `${SERVICES_ASSETS}/movil`;
+
+const getImage = (url, index) => `${url}/${index}.png`;
+
 export const PROYECTOSDesktop = [
-  { original: require("./image/SLIDES PROYECTOS/1.png") },
-  { original: require("./image/SLIDES PROYECTOS/2.png") },
-  { original: require("./image/SLIDES PROYECTOS/3.png") },
-  { original: require("./image/SLIDES PROYECTOS/4.png") },
-  { original: require("./image/SLIDES PROYECTOS/5.png") },
-  { original: require("./image/SLIDES PROYECTOS/6.png") },
-  { original: require("./image/SLIDES PROYECTOS/7.png") },
-  { original: require("./image/SLIDES PROYECTOS/8.png") },
-  { original: require("./image/SLIDES PROYECTOS/9.png") },
-  { original: require("./image/SLIDES PROYECTOS/10.png") },
-  { original: require("./image/SLIDES PROYECTOS/11.png") },
-  { original: require("./image/SLIDES PROYECTOS/12.png") },
-  { original: require("./image/SLIDES PROYECTOS/13.png") },
-  { original: require("./image/SLIDES PROYECTOS/14.png") },
-  { original: require("./image/SLIDES PROYECTOS/15.png") },
-  { original: require("./image/SLIDES PROYECTOS/16.png") },
-  { original: require("./image/SLIDES PROYECTOS/17.png") },
-  { original: require("./image/SLIDES PROYECTOS/18.png") },
-  { original: require("./image/SLIDES PROYECTOS/19.png") },
-  { original: require("./image/SLIDES PROYECTOS/20.png") },
-  { original: require("./image/SLIDES PROYECTOS/21.png") },
+  { original: getImage(PROJECTS_DESKTOP, 1) },
+  { original: getImage(PROJECTS_DESKTOP, 2) },
+  { original: getImage(PROJECTS_DESKTOP, 3) },
+  { original: getImage(PROJECTS_DESKTOP, 4) },
+  { original: getImage(PROJECTS_DESKTOP, 5) },
+  { original: getImage(PROJECTS_DESKTOP, 6) },
+  { original: getImage(PROJECTS_DESKTOP, 7) },
+  { original: getImage(PROJECTS_DESKTOP, 8) },
+  { original: getImage(PROJECTS_DESKTOP, 9) },
+  { original: getImage(PROJECTS_DESKTOP, 10) },
+  { original: getImage(PROJECTS_DESKTOP, 11) },
+  { original: getImage(PROJECTS_DESKTOP, 12) },
+  { original: getImage(PROJECTS_DESKTOP, 13) },
+  { original: getImage(PROJECTS_DESKTOP, 14) },
+  { original: getImage(PROJECTS_DESKTOP, 15) },
+  { original: getImage(PROJECTS_DESKTOP, 16) },
+  { original: getImage(PROJECTS_DESKTOP, 17) },
+  { original: getImage(PROJECTS_DESKTOP, 18) },
+  { original: getImage(PROJECTS_DESKTOP, 19) },
+  { original: getImage(PROJECTS_DESKTOP, 20) },
+  { original: getImage(PROJECTS_DESKTOP, 21) },
 ];
 
 export const PROYECTOSMobile = [
-  { original: require("./image/SLIDES PROYECTOS MOVIL/1.png") },
-  { original: require("./image/SLIDES PROYECTOS MOVIL/2.png") },
-  { original: require("./image/SLIDES PROYECTOS MOVIL/3.png") },
-  { original: require("./image/SLIDES PROYECTOS MOVIL/4.png") },
-  { original: require("./image/SLIDES PROYECTOS MOVIL/5.png") },
-  { original: require("./image/SLIDES PROYECTOS MOVIL/6.png") },
-  { original: require("./image/SLIDES PROYECTOS MOVIL/7.png") },
-  { original: require("./image/SLIDES PROYECTOS MOVIL/8.png") },
-  { original: require("./image/SLIDES PROYECTOS MOVIL/9.png") },
-  { original: require("./image/SLIDES PROYECTOS MOVIL/10.png") },
-  { original: require("./image/SLIDES PROYECTOS MOVIL/11.png") },
-  { original: require("./image/SLIDES PROYECTOS MOVIL/12.png") },
-  { original: require("./image/SLIDES PROYECTOS MOVIL/13.png") },
-  { original: require("./image/SLIDES PROYECTOS MOVIL/14.png") },
-  { original: require("./image/SLIDES PROYECTOS MOVIL/15.png") },
-  { original: require("./image/SLIDES PROYECTOS MOVIL/16.png") },
-  { original: require("./image/SLIDES PROYECTOS MOVIL/17.png") },
-  { original: require("./image/SLIDES PROYECTOS MOVIL/18.png") },
-  { original: require("./image/SLIDES PROYECTOS MOVIL/19.png") },
-  { original: require("./image/SLIDES PROYECTOS MOVIL/20.png") },
-  { original: require("./image/SLIDES PROYECTOS MOVIL/21.png") },
+  { original: getImage(PROJECTS_MOVIL, 1) },
+  { original: getImage(PROJECTS_MOVIL, 2) },
+  { original: getImage(PROJECTS_MOVIL, 3) },
+  { original: getImage(PROJECTS_MOVIL, 4) },
+  { original: getImage(PROJECTS_MOVIL, 5) },
+  { original: getImage(PROJECTS_MOVIL, 6) },
+  { original: getImage(PROJECTS_MOVIL, 7) },
+  { original: getImage(PROJECTS_MOVIL, 8) },
+  { original: getImage(PROJECTS_MOVIL, 9) },
+  { original: getImage(PROJECTS_MOVIL, 10) },
+  { original: getImage(PROJECTS_MOVIL, 11) },
+  { original: getImage(PROJECTS_MOVIL, 12) },
+  { original: getImage(PROJECTS_MOVIL, 13) },
+  { original: getImage(PROJECTS_MOVIL, 14) },
+  { original: getImage(PROJECTS_MOVIL, 15) },
+  { original: getImage(PROJECTS_MOVIL, 16) },
+  { original: getImage(PROJECTS_MOVIL, 17) },
+  { original: getImage(PROJECTS_MOVIL, 18) },
+  { original: getImage(PROJECTS_MOVIL, 19) },
+  { original: getImage(PROJECTS_MOVIL, 20) },
+  { original: getImage(PROJECTS_MOVIL, 21) },
 ];
 
 export const SERVICIOSDesktop = [
-  { original: require("./image/SLIDES SERVICIOS/1.png") },
-  { original: require("./image/SLIDES SERVICIOS/2.png") },
-  { original: require("./image/SLIDES SERVICIOS/3.png") },
-  { original: require("./image/SLIDES SERVICIOS/4.png") },
+  { original: getImage(SERVICES_DESKTOP, 1) },
+  { original: getImage(SERVICES_DESKTOP, 2) },
+  { original: getImage(SERVICES_DESKTOP, 3) },
+  { original: getImage(SERVICES_DESKTOP, 4) },
 ];
 
 export const SERVICIOSMobile = [
-  { original: require("./image/SLIDES SERVICIOS MOVIL/1.png") },
-  { original: require("./image/SLIDES SERVICIOS MOVIL/2.png") },
-  { original: require("./image/SLIDES SERVICIOS MOVIL/3.png") },
-  { original: require("./image/SLIDES SERVICIOS MOVIL/4.png") },
+  { original: getImage(SERVICES_MOVIL, 1) },
+  { original: getImage(SERVICES_MOVIL, 2) },
+  { original: getImage(SERVICES_MOVIL, 3) },
+  { original: getImage(SERVICES_MOVIL, 4) },
 ];

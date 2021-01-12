@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { ReactComponent as Logo } from "../../assets/image/RECURSOS/HEADER/header-1_logo.svg";
-import { ReactComponent as Logo2 } from "../../assets/image/RECURSOS/HEADER/header-2_logo.svg";
+import React from "react";
 import { rightlog, rightlog1, leftlog, leftlog1 } from "../../assets";
 import {
   HeaderContainer,
@@ -11,11 +9,6 @@ import {
 } from "./style";
 
 function Header({ toggleMenu }) {
-  const [state, setState] = useState({
-    logo: Logo,
-    img: rightlog,
-  });
-
   window.addEventListener("scroll", (event) => {
     const rightLog = document.getElementsByClassName("rightLog")[0];
     const leftLog = document.getElementsByClassName("leftLog")[0];
