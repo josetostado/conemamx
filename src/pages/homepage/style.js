@@ -34,12 +34,14 @@ export const FirstBlock = styled.div`
   }
 `;
 
-export const FirstBlockTitleSm = styled.div`
+export const FirstBlockTitleSm = styled.p`
   font-size: 65px;
   font-family: Blockletter Regular;
   color: #1b223a;
   transition: color 2s;
   cursor: pointer;
+  margin: 0;
+  line-height: 0.4;
 
   :hover {
     color: #ffffff;
@@ -50,18 +52,34 @@ export const FirstBlockTitleSm = styled.div`
     font-size: 6.4em;
   }
   @media (max-width: 590px) {
+    font-size: 5.5em;
+  }
+  @media (max-width: 537px) {
     font-size: 5em;
   }
   @media (max-width: 505px) {
+    font-size: 4.7em;
+  }
+  @media (max-width: 466px) {
     font-size: 4em;
+  }
+  @media (max-width: 404px) {
+    font-size: 3.7em;
+  }
+  @media (max-width: 378px) {
+    font-size: 3.5em;
+  }
+  @media (max-width: 360px) {
+    font-size: 3.3em;
   }
 `;
 
-export const FirstBlockTitleBg = styled.div`
+export const FirstBlockTitleBg = styled.p`
   font-size: 120px;
   color: #1b223a;
   font-family: Blockletter Regular;
 
+  margin: 0;
   transition: color 2s;
 
   :hover {
@@ -71,17 +89,28 @@ export const FirstBlockTitleBg = styled.div`
   cursor: pointer;
 
   @media (max-width: 768px) {
-    font-size: 12em;
+    font-size: 11.8em;
   }
   @media (max-width: 590px) {
     font-size: 10em;
   }
-  @media (max-width: 505px) {
-    font-size: 8em;
+  @media (max-width: 537px) {
+    font-size: 9.1em;
   }
-
-  @media (max-width: 430px) {
-    font-size: 7em;
+  @media (max-width: 505px) {
+    font-size: 8.6em;
+  }
+  @media (max-width: 466px) {
+    font-size: 7.4em;
+  }
+  @media (max-width: 404px) {
+    font-size: 6.9em;
+  }
+  @media (max-width: 378px) {
+    font-size: 6.5em;
+  }
+  @media (max-width: 360px) {
+    font-size: 6em;
   }
 `;
 
@@ -98,7 +127,6 @@ export const Content = styled.div`
     max-width: 590px;
     align-items: center;
   }
-
   @media (max-width: 590px) {
     padding: 15px;
   }
@@ -140,8 +168,9 @@ export const Description = styled.div`
   font-family: DINAlternate-Bold;
   font-size: 20px;
   cursor: pointer;
-
+  max-width: 360px;
   transition: color 2s;
+  margin-bottom: 16px;
 
   :hover {
     color: #ffffff;
@@ -154,10 +183,30 @@ export const Description = styled.div`
   }
 
   @media (max-width: 768px) {
+    max-width: none;
     font-size: 2.5em;
   }
-  @media (max-width: 430px) {
+  @media (max-width: 537px) {
+    margin: 0 20px 30px;
+  }
+  @media (max-width: 505px) {
+    max-width: 430px;
+    margin: 0 0 30px;
+  }
+  @media (max-width: 466px) {
+    max-width: 360px;
+    font-size: 2.1em;
+  }
+  @media (max-width: 404px) {
+    max-width: 341px;
     font-size: 2em;
+  }
+  @media (max-width: 378px) {
+    max-width: 310px;
+    font-size: 1.5em;
+  }
+  @media (max-width: 360px) {
+    max-width: 290px;
   }
 `;
 
