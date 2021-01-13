@@ -23,28 +23,58 @@ export const ContactFormDescription = styled.div`
   @media (max-width: 1120px) {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    margin: 0 auto;
+    width: 75%;
     font-size: 2em;
+    align-items: center;
   }
 `;
 
 export const ContactFormItem = styled.div`
   display: flex;
-  margin: auto;
   align-items: center;
 
   @media (max-width: 1120px) {
-    justify-content: center;
-    width: 100%;
+    line-height: 0.5;
+    justify-content: space-between;
+    width: 80%;
   }
-  @media (max-width: 550px) {
+  @media (max-width: 850px) {
     font-size: 0.9em;
   }
-  @media (max-width: 440px) {
+  @media (max-width: 776px) {
+    width: 85%;
+  }
+  @media (max-width: 720px) {
     font-size: 0.8em;
   }
-  @media (max-width: 400px) {
-    font-size: 0.65em;
+  @media (max-width: 581px) {
+    width: 90%;
+  }
+  @media (max-width: 550px) {
+    width: 100%;
+  }
+  @media (max-width: 470px) {
+    font-size: 0.7em;
+  }
+  @media (max-width: 420px) {
+    font-size: 0.6em;
+  }
+  @media (max-width: 371px) {
+    font-size: 0.5em;
+  }
+  @media (max-width: 325px) {
+    width: 105%;
+  }
+  @media (max-width: 307px) {
+    width: 106%;
+  }
+`;
+
+export const IconContainer = styled.div`
+  margin-right: 30px;
+  @media (max-width: 520px) {
+    margin-right: 10px;
   }
 `;
 
@@ -59,7 +89,7 @@ export const ContactFormGroup = styled.div`
   @media (max-width: 1120px) {
     margin: auto;
     margin-top: 30px;
-    width: 60%;
+    width: 80%;
   }
 
   @media (max-width: 768px) {
@@ -74,5 +104,11 @@ export const FormGroupTitle = styled.div`
 
   @media (max-width: 600px) {
     font-size: 30px;
+  }
+`;
+
+export const TextArea = styled.textarea`
+  @media (max-width: 1120px) {
+    height: 200px;
   }
 `;

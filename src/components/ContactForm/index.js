@@ -9,6 +9,8 @@ import {
   ContactFormItem,
   ContactFormGroup,
   FormGroupTitle,
+  TextArea,
+  IconContainer,
 } from "./style";
 
 import { IconContext } from "react-icons";
@@ -80,57 +82,39 @@ export default function CContactForm() {
     <ScrollAnimation animateIn="fadeIn">
       <ContactForm>
         <ContactFormDescription>
-          <ContactFormItem style={{ display: "flex", margin: "auto" }}>
-            <div
-              className="contactIcon"
-              style={{ width: "5%", marginRight: "30px" }}
-            >
+          <ContactFormItem>
+            <IconContainer className="contactIcon">
               <a href="https://maps.app.goo.gl/sziFGF85Ju1QVYF49">
                 <MapsIcon className="rotate" />
               </a>
-            </div>
-            <div
-              style={{ width: "300px", marginRight: "30px" }}
-              className="contactDescirption"
-            >
-              <div>Col. Progreso Nacional,</div>
-              <div>Alcaldía, Gustavo A. Madero</div>
-              <div>Ciudad de México, México</div>
+            </IconContainer>
+            <div style={{ width: "calc(100% - 35px)" }}>
+              <p>Col. Progreso Nacional,</p>
+              <p>Alcaldía, Gustavo A. Madero</p>
+              <p>Ciudad de México, México</p>
             </div>
           </ContactFormItem>
           <ContactFormItem style={{ marginTop: "30px" }}>
-            <div
-              className="contactIcon"
-              style={{ width: "5%", marginRight: "30px" }}
-            >
+            <IconContainer className="contactIcon">
               <PhoneIcon className="rotate" />
-            </div>
-            <div
-              style={{ width: "300px", marginRight: "30px" }}
-              className="contactDescirptionphone"
-            >
+            </IconContainer>
+            <div style={{ width: "calc(100% - 35px)" }}>
               <a href="tel:+525558864581" className="phoneLink">
-                <div className="phone">(+52)55 5886-4581</div>
+                <p className="phone">(+52)55 5886-4581</p>
               </a>
               <a href="tel:+522821076564" className="phoneLink">
-                <div className="phone">(+52)28 2107-6564</div>
+                <p className="phone">(+52)28 2107-6564</p>
               </a>
             </div>
           </ContactFormItem>
-          <ContactFormItem style={{ marginTop: "30px" }}>
-            <div
-              className="contactIcon"
-              style={{ width: "5%", marginRight: "30px" }}
-            >
+          <ContactFormItem style={{ marginTop: "30px", marginBottom: "30px" }}>
+            <IconContainer className="contactIcon">
               <a href="mailto:cotizaciones@conemamx.com">
                 <SendIcon className="rotate" />
               </a>
-            </div>
-            <div
-              style={{ width: "300px", marginRight: "30px" }}
-              className="contactDescirption"
-            >
-              <div>cotizaciones@conemamx.com</div>
+            </IconContainer>
+            <div style={{ width: "calc(100% - 35px)" }}>
+              <p>cotizaciones@conemamx.com</p>
             </div>
           </ContactFormItem>
         </ContactFormDescription>
@@ -215,7 +199,7 @@ export default function CContactForm() {
             {formik.errors.email ? (
               <span className="errorText">{formik.errors.email}</span>
             ) : null}
-            <textarea
+            <TextArea
               name="message"
               placeholder="Mensaje"
               className={formik.errors.message ? "error" : null}
