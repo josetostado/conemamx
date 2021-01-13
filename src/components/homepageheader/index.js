@@ -1,12 +1,6 @@
 import React from "react";
 import { rightlog, rightlog1, leftlog, leftlog1 } from "../../assets";
-import {
-  HeaderContainer,
-  MainHeaderBar,
-  ContainerLog,
-  LeftLog,
-  RightLog,
-} from "./style";
+import { MainHeaderBar, ContainerLog, LeftLog, RightLog } from "./style";
 
 function Header({ toggleMenu }) {
   window.addEventListener("scroll", (event) => {
@@ -33,14 +27,12 @@ function Header({ toggleMenu }) {
   });
 
   return (
-    <HeaderContainer>
-      <MainHeaderBar className="MainHeaderBar">
-        <ContainerLog>
-          <LeftLog className="leftLog"></LeftLog>
-          <RightLog className="rightLog"></RightLog>
-        </ContainerLog>
-      </MainHeaderBar>
-    </HeaderContainer>
+    <MainHeaderBar className="MainHeaderBar">
+      <ContainerLog>
+        <LeftLog className="leftLog"></LeftLog>
+        <RightLog className="rightLog"></RightLog>
+      </ContainerLog>
+    </MainHeaderBar>
   );
 }
 

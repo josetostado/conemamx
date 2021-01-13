@@ -11,7 +11,6 @@ export const rightlog = require("./image/RECURSOS/HEADER/header-1_gear.png");
 export const rightlog1 = require("./image/RECURSOS/HEADER/header-2_gear.png");
 export const leftlog = require("./image/RECURSOS/HEADER/header-1_logo.svg");
 export const leftlog1 = require("./image/RECURSOS/HEADER/header-2_logo.svg");
-export const backImg = require("./image/backgrand_lowpoli.jpg");
 export const backLog = require("./image/backgrand_Cgear.svg");
 // export const video = require('./videoes/advertising.mp4');
 
