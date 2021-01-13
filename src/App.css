@@ -10,9 +10,6 @@ body {
 body {
   min-height: 100vh;
   height: 100%;
-  background: url("/assets/images/backgrand_lowpoli.jpg") no-repeat center
-    center/cover;
-  background-attachment: scroll;
 }
 
 .sendBtn {

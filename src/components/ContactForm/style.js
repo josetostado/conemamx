@@ -95,6 +95,9 @@ export const ContactFormGroup = styled.div`
   @media (max-width: 768px) {
     width: 80%;
   }
+  @media (max-width: 550px) {
+    width: 100%;
+  }
 `;
 
 export const FormGroupTitle = styled.div`
@@ -110,5 +113,8 @@ export const FormGroupTitle = styled.div`
 export const TextArea = styled.textarea`
   @media (max-width: 1120px) {
     height: 200px;
+  }
+  @media (max-width: 440px) {
+    height: 100px;
   }
 `;

@@ -7,6 +7,8 @@ import { NotificationContainer } from "react-notifications";
 
 import "react-notifications/lib/notifications.css";
 
+import { Background, SecondaryBackground } from "./style";
+
 import Header from "../../components/homepageheader";
 import FirstBlock from "../../components/FirstBlock";
 import SecondBlock from "../../components/SecondBlock";
@@ -66,6 +68,8 @@ function HomePage() {
       indicator={RocketHor}
     >
       <Header></Header>
+      <Background />
+      <SecondaryBackground />
       <FirstBlock />
       <SecondBlock />
       <ContactForm />

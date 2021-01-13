@@ -48,7 +48,7 @@ export const FirstBlockTitleSm = styled.p`
     font-size: 3.5em;
   }
   @media (max-width: 380px) {
-    font-size: 3.3em;
+    font-size: 3em;
   }
   @media (max-width: 335px) {
     font-size: 2.8em;
@@ -94,9 +94,6 @@ export const FirstBlockTitleBg = styled.p`
     font-size: 6.9em;
   }
   @media (max-width: 380px) {
-    font-size: 6.5em;
-  }
-  @media (max-width: 335px) {
     font-size: 5.8em;
   }
   @media (max-width: 318px) {
