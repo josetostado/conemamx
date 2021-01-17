@@ -17,7 +17,7 @@ export const ContactForm = styled.div`
 export const ContactFormDescription = styled.div`
   width: 40%;
   font-family: DINAlternate-Bold;
-  font-size: 28px;
+  font-size: 30px;
   font-style: bold;
   display: flex;
   flex-direction: column;
