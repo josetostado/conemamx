@@ -85,7 +85,7 @@ export default function CContactForm() {
                 <MapsIcon className="rotate" />
               </a>
             </IconContainer>
-            <div style={{ width: "calc(100% - 35px)" }}>
+            <div style={{ width: "calc(100% - 30px)" }}>
               <p>Col. Progreso Nacional,</p>
               <p>Alcaldía, Gustavo A. Madero</p>
               <p>Ciudad de México, México</p>
@@ -95,7 +95,7 @@ export default function CContactForm() {
             <IconContainer className="contactIcon">
               <PhoneIcon className="rotate" />
             </IconContainer>
-            <div style={{ width: "calc(100% - 35px)" }}>
+            <div style={{ width: "calc(100% - 30px)" }}>
               <a href="tel:+525558864581" className="phoneLink">
                 <p className="phone">(+52)55 5886-4581</p>
               </a>
