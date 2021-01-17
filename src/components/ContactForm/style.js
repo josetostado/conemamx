@@ -19,10 +19,10 @@ export const ContactFormDescription = styled.div`
   font-family: DINAlternate-Bold;
   font-size: 30px;
   font-style: bold;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   @media (max-width: 1120px) {
-    display: flex;
-    flex-direction: column;
     margin: 0 auto;
     width: 75%;
     font-size: 2em;
@@ -33,7 +33,7 @@ export const ContactFormDescription = styled.div`
 export const ContactFormItem = styled.div`
   display: flex;
   align-items: center;
-
+  line-height: 0.5;
   @media (max-width: 1120px) {
     line-height: 0.5;
     justify-content: space-between;
@@ -67,7 +67,7 @@ export const ContactFormItem = styled.div`
     width: 105%;
   }
   @media (max-width: 307px) {
-    width: 106%;
+    width: 110%;
   }
 `;
 

@@ -11,6 +11,12 @@ export const FirstBlock = styled.div`
     flex-direction: column;
     align-items: center;
   }
+  @media (max-width: 537px) {
+    margin-top: 120px;
+  }
+  @media (max-width: 505px) {
+    margin-top: 100px;
+  }
 `;
 
 export const FirstBlockTitleSm = styled.p`
@@ -62,7 +68,7 @@ export const FirstBlockTitleBg = styled.p`
   font-size: 120px;
   color: #1b223a;
   font-family: Blockletter Regular;
-
+  line-height: 0.95;
   margin: 0;
   transition: color 2s;
 
@@ -91,13 +97,16 @@ export const FirstBlockTitleBg = styled.p`
     font-size: 7em;
   }
   @media (max-width: 406px) {
-    font-size: 6.9em;
+    font-size: 6.5em;
   }
   @media (max-width: 380px) {
-    font-size: 5.8em;
+    font-size: 5.6em;
+  }
+  @media (max-width: 335px) {
+    font-size: 5.2em;
   }
   @media (max-width: 318px) {
-    font-size: 5.2em;
+    font-size: 4.6em;
   }
 `;
 
@@ -171,29 +180,28 @@ export const Description = styled.div`
 
   @media (max-width: 768px) {
     max-width: none;
-    font-size: 2.5em;
+    font-size: 1.5em;
   }
   @media (max-width: 590px) {
-    margin: 0 20px 30px;
+    margin: 0 20px 0;
   }
   @media (max-width: 537px) {
-    margin: 0 20px 30px;
+    font-size: 1.3em;
+    margin: 0 20px 0;
   }
   @media (max-width: 505px) {
-    font-size: 1.7em;
     max-width: 380px;
-    margin: 0 0 30px;
+    margin: 0 0 0;
   }
   @media (max-width: 466px) {
     max-width: 350px;
   }
   @media (max-width: 404px) {
     max-width: 341px;
-    font-size: 2em;
   }
   @media (max-width: 378px) {
+    font-size: 1.1em;
     max-width: 310px;
-    font-size: 1.5em;
   }
   @media (max-width: 360px) {
     max-width: 290px;

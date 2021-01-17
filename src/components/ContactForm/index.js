@@ -33,16 +33,13 @@ export default function CContactForm() {
       const errors = {};
       if (!values.name) {
         errors.name = "¡El campo de nombre es obligatorio!";
-      } else if (!values.company) {
-        errors.name = "¡El campo del nombre de la empresa es obligatorio!";
-      } else if (!values.email) {
+      }
+      if (!values.email) {
         errors.email = "¡El campo de correo electrónico es obligatorio!";
       } else if (
         !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
       ) {
         errors.email = "¡El email debe ser válido!";
-      } else if (!values.message) {
-        errors.message = "¡El campo de mensaje es obligatorio!";
       }
 
       return errors;
@@ -107,7 +104,7 @@ export default function CContactForm() {
               </a>
             </div>
           </ContactFormItem>
-          <ContactFormItem style={{ marginTop: "30px", marginBottom: "30px" }}>
+          <ContactFormItem style={{ marginTop: "30px" }}>
             <IconContainer className="contactIcon">
               <a href="mailto:cotizaciones@conemamx.com">
                 <SendIcon className="rotate" />
@@ -155,7 +152,7 @@ export default function CContactForm() {
             <input
               type="text"
               name="name"
-              placeholder="Nombre"
+              placeholder="Nombre*"
               className={formik.errors.name ? "error" : null}
               onChange={formik.handleChange}
               value={formik.values.name}
@@ -180,7 +177,7 @@ export default function CContactForm() {
               <input
                 type="text"
                 name="email"
-                placeholder="Email"
+                placeholder="Email*"
                 className={formik.errors.email ? "error" : null}
                 onChange={formik.handleChange}
                 value={formik.values.email}
