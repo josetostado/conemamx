@@ -17,7 +17,7 @@ export const ContactForm = styled.div`
 export const ContactFormDescription = styled.div`
   width: 40%;
   font-family: DINAlternate-Bold;
-  font-size: 30px;
+  font-size: 28px;
   font-style: bold;
   display: flex;
   flex-direction: column;
@@ -81,7 +81,7 @@ export const IconContainer = styled.div`
 export const ContactFormGroup = styled.div`
   width: 50%;
   fontfamily: DINAlternate-Bold;
-  fontsize: 30px;
+  fontsize: 28px;
   fontstyle: bold;
   background: rgb(154 27 13 / 0.9);
   border: 15px solid #7f0701;
