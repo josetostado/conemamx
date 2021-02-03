@@ -16,6 +16,8 @@ background: rgb(107 5 0 / 90%);
   min-width: 0;
 }
 @media(max-width:768px){
+  -webkit-clip-path: clip-path: polygon(60% 5%, 100% 5%, 100% 100%, 0px 100%, 0px 0px, 50% 0px);;
+  clip-path: polygon(60% 5%, 100% 5%, 100% 100%, 0px 100%, 0px 0px, 50% 0px);;
   padding: 2% 1%;
 }
 `;
@@ -32,8 +34,11 @@ display: block;
 position: relative;
 top: 3%;
 left: 1.5%;
-padding:30px;
-
+padding: 0px 30px 30px 30px;
+@media(max-width:768px){
+  -webkit-clip-path: clip-path: polygon(60% 5%, 100% 5%, 100% 100%, 0px 100%, 0px 0px, 50% 0px);;
+  clip-path: polygon(60% 5%, 100% 5%, 100% 100%, 0px 100%, 0px 0px, 50% 0px);;
+}
 `;
 
 export const CarouselDivBigTextSm = styled.div`

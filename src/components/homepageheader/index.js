@@ -8,8 +8,10 @@ function Header({ toggleMenu }) {
     const leftLog = document.getElementsByClassName("leftLog")[0];
     const mainHeaderBar = document.getElementsByClassName("MainHeaderBar")[0];
     if (window.scrollY > 80) {
-      mainHeaderBar.style.minHeight = "52px";
       mainHeaderBar.style.height = "62px";
+      if (window.innerWidth < '768') {
+        mainHeaderBar.style.height = "45px";
+      }
       mainHeaderBar.style.borderBottom = "10px solid #952511";
       leftLog.style.backgroundImage = `url(${leftlog1})`;
       leftLog.style.marginTop = "5px";

@@ -15,11 +15,14 @@ export const MainHeaderBar = styled.div`
   z-index: 1;
   width: 100%;
   height: 100%;
-  min-height: 101px;
   max-height: 101px;
   background-color: rgba(203, 47, 29, 0.8);
+  background-color: rgba(160,10,20,0.8);
   align-items: flex-end;
   border-bottom: 20px solid #952511;
+  @media(max-width:768px){
+    min-height: 0px;
+  }
 `;
 
 export const BottomHeaderBar = styled.div`
@@ -59,4 +62,7 @@ export const RightLog = styled.div`
   background-image: url(${rightlog});
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  @media(max-width:768px){
+    margin: 0 5% 0 10px;
+  }
 `;
